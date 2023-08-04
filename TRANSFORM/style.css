@@ -19,11 +19,58 @@ main {
     background-size: cover;
 }
 
+#nave, #sol, #luna, #tierra {
+    transition: linear 1s;
+    transition: ease 3s;
+}
+
 /* #nave{
     background-color: blue;
 } */
 
-/* .rotar {
+#nave:hover {
+    /* efecto en eje X: choca la nave */
+    transform: translate(200%);
+    /* ejecto en el eje X e Y:  esquiva el sol */
+    transform: translate(100px, -200px);
+    /* skew */
+    transform: skew(45deg);
+    /* rotate en eje X e Y */
+    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    transform: rotateZ(180deg);
+}
+
+#tierra:hover {
+    transform: rotate(360deg);
+}
+
+#sol:hover {
+    transform: scale(2, 2);
+}
+
+#luna:hover {
+    transform: scale(0.5, 0.5);
+    transform: scale(.5, .5);
+}
+
+
+/* * EN 2D
+translate() -> funciona con % y con px
+rotate( ) => grados "deg"
+scale( ) => numero y %. Escala el elemento
+skew( ) -> grados "deg"
+matrix(a, b, c, d) => rotate(), skew(), scale(), translate( )
+
+* EN 3D
+! Espejan el elemento
+
+rotateX( ) => grados "deg" - mueve las imagenes de arriba hacia abajo
+rotateY( ) => grados "deg" mueve las imagenes de izquierda hacia la derecha 
+rotateZ( ) => grados "deg"  gira las imagenes en el eje Z
+*/
+
+.rotar {
     animation: girar 60s;
     animation-iteration-count: infinite;
 }
@@ -35,4 +82,4 @@ main {
     to {
         transform: rotate(360deg);
     }
-} */
+}

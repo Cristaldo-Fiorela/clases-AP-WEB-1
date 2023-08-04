@@ -28,13 +28,20 @@ header {
     width: 100%;
     background-image: url("https://cdn.pixabay.com/photo/2017/05/31/11/21/pink-2360087_1280.jpg");
     background-size: cover;
-    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+header nav {
+    position: absolute;
+    right: 15px;
+    top: 100%;
 }
 
 nav a {
     background-color: pink;
     color: black;
-    border: 5px dotted rgb(241, 53, 213);
+    border: 5px dotted #f135d5;
     border-radius: 10px;
     text-decoration: none;
     padding: 10px 20px;
@@ -42,14 +49,14 @@ nav a {
 
 header nav a:hover {
     background-color: white;
-    color: rgb(171, 57, 78);
+    color: #ab394e;
     font-size: large;
     font-weight: bold;
 }
 
-header nav a:last-child{
+/* header nav a:last-child{
     margin-right: 50px;
-}
+} */
 
 /* * BIENVENIDA SECTION */
 
@@ -61,13 +68,32 @@ section.bienvenida {
     height: 30vh;
     width: 100%;
     padding: 2rem;
+    position: relative;
+}
+
+section.bienvenida img,
+section.bienvenida h2 {
+    position: absolute;
+    top: 0;
+    width: 50%;
 }
 
 section.bienvenida h2 {
+    right: 0;
+    top: 30%;
+}
+
+section.bienvenida img {
     text-align: center;
+    left: 0;
 }
 
 img[alt="logo barbie"] {
     width: 100px;
     margin-right: 10px;
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    position: sticky;
+    top: 5rem;
 }
