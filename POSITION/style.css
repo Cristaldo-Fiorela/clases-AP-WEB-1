@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,700;1,400&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+/* * HEADER */
+
+h1 {
+    font-family: 'Cabin', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2017/05/31/11/21/pink-2360087_1280.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav a {
+    background-color: pink;
+    color: black;
+    border: 5px dotted rgb(241, 53, 213);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+header nav a:hover {
+    background-color: white;
+    color: rgb(171, 57, 78);
+    font-size: large;
+    font-weight: bold;
+}
+
+header nav a:last-child{
+    margin-right: 50px;
+}
+
+/* * BIENVENIDA SECTION */
+
+section.bienvenida img[alt="barbie"] {
+    width: 400px;
+}
+
+section.bienvenida {
+    height: 30vh;
+    width: 100%;
+    padding: 2rem;
+}
+
+section.bienvenida h2 {
+    text-align: center;
+}
+
+img[alt="logo barbie"] {
+    width: 100px;
+    margin-right: 10px;
+}
