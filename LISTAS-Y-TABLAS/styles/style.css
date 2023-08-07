@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Barlow,sans-serif;
+}
+
+body {
+    background: linear-gradient(to top, #F27121, #E94057, #8A2387);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/**============ HEADER =============*/
+
+img {
+    max-width: 75vw;
+}
+
+header {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav {
+    background-color: aliceblue;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 10px 5px 5px black;
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/**============ MAIN =============*/
+
+main {
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+h1 {
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
+    color: aliceblue;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.information-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    min-height: fit-content;
+    width: 90%;
+}
+
+section {
+    background-color: whitesmoke;
+    border: 8px black solid;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h2, p {
+    padding-bottom: 2vh;
+}
+
+.left-infobox, .right-infobox {
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    max-width: 40rem;
+}
+.left-infobox {
+    justify-content: center;
+    gap: 50px;
+}
+
+/**============ LISTAS =============*/
