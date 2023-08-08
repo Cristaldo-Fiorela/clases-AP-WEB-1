@@ -29,13 +29,6 @@ header {
     justify-content: space-around;
 }
 
-h1 {
-    -webkit-text-stroke: 3px rgb(0, 0, 0);
-    color: aliceblue;
-    font-size: 3rem;
-    font-weight: bolder;
-}
-
 nav {
     background-color: aliceblue;
     width: fit-content;
@@ -69,6 +62,13 @@ main {
     margin-bottom: 50vh;
 }
 
+h1 {
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
+    color: aliceblue;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
 .lineup-img {
     height: 40vw;
 }
@@ -82,3 +82,43 @@ main {
 }
 
 /**============ TABLA =============*/
+
+table {
+    background-color: aliceblue;
+    height: 50vh;
+    width: 40rem;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    /* empty-cells: hide; */
+    caption-side: bottom;
+}
+
+table, th, td {
+    border: 5px solid;
+    text-align: center;
+    border-color: black;
+}
+
+th {
+    background-color: black;
+    color: aliceblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+    color: aliceblue;
+}
+
+.dia {
+    background-color: aqua;
+}
+
+.sector {
+    background-color: pink;
+}
+
+.tarifa {
+    background-color: red;
+}

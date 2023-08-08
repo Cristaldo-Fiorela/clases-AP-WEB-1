@@ -104,3 +104,29 @@ h2, p {
 }
 
 /**============ LISTAS =============*/
+
+li {
+    list-style-position: inside;
+}
+
+ol > li {
+    /* list-style-image: url("../assets/icon.png"); */
+    list-style-type: upper-roman;
+    list-style-type: lower-roman;
+    list-style-type: lower-alpha;
+    list-style-type: upper-alpha;
+}
+
+ul > li {
+    /* list-style-image: url("../assets/icon.png"); */
+    /* list-style-type: ; */
+    list-style-type: circle;
+    list-style-type: square;
+
+}
+
+li::marker {
+    color: blueviolet;
+    content: '🥰';
+    /* font-size: 100px; */
+}
