@@ -111,6 +111,10 @@ tr:nth-child(even) {
     color: aliceblue;
 }
 
+tr:hover td:not([rowspan],[colspan]) {
+    background-color: green;
+}
+
 .dia {
     background-color: aqua;
 }
