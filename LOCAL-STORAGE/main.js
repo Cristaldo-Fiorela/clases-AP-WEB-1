@@ -8,10 +8,18 @@ agregarButton.addEventListener('click', () => {
     const mensaje = mensajeInput.value.trim();
     if (mensaje !== '') {
         crearTarjeta(mensaje);
+        actualizarLocal();
         mensajeInput.value = '';
     }
 });
 
+window.addEventListener('load', () => {
+    const tarjetasGuardadas = JSON.parse(localStorage.getItem('tarjetas'));
+
+    tarjetasGuardadas.forEach(mensaje => {
+        crearTarjeta(mensaje);
+    });
+})
 
 // Funciones
 function crearTarjeta(mensaje) {
@@ -29,9 +37,21 @@ function crearTarjeta(mensaje) {
 
     btnEliminar.addEventListener('click', () => {
         tarjeta.remove();
+        actualizarLocal();
     });
 
     tarjeta.appendChild(mensajeParrafo);
     tarjeta.appendChild(btnEliminar);
     tarjetasContainer.appendChild(tarjeta);
+}
+
+function actualizarLocal() {
+    const tarjetas = [];
+    const elementoP = document.querySelectorAll('.mensaje p');
+    
+    elementoP.forEach(parrafo => {
+        tarjetas.push(parrafo.textContent);
+    })
+
+    localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
 }
